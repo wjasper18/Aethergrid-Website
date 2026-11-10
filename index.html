@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aether Grid Studios | Official Portal</title>
     <style>
+        * { box-sizing: border-box; }
         body {
             background-color: #0b0c10;
             color: #c5c6c7;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 40px 20px;
+            padding: 30px 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 850px;
             width: 100%;
             border: 2px solid #45a29e;
-            padding: 40px;
+            padding: 35px 25px;
             background-color: #1f2833;
             border-radius: 8px;
             box-shadow: 0 0 25px rgba(102, 252, 241, 0.15);
@@ -27,7 +29,7 @@
         h1 {
             color: #66fcf1;
             margin: 0 0 5px 0;
-            font-size: 2.5em;
+            font-size: 2.4em;
             letter-spacing: 3px;
             text-align: center;
         }
@@ -36,17 +38,39 @@
             color: #45a29e;
             font-weight: bold;
             letter-spacing: 1.5px;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
+        }
+        .btn-center {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .yt-button {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            letter-spacing: 1px;
+            font-size: 1em;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .yt-button:hover {
+            background-color: #cc0000;
+            transform: scale(1.04);
         }
         h2 {
             color: #66fcf1;
             border-bottom: 1px solid #45a29e;
             padding-bottom: 8px;
-            margin-top: 30px;
+            margin-top: 35px;
             letter-spacing: 1px;
+            font-size: 1.3em;
         }
         .progress-item {
-            margin: 18px 0;
+            margin: 16px 0;
         }
         .progress-label {
             display: flex;
@@ -54,18 +78,50 @@
             margin-bottom: 6px;
             font-weight: bold;
             color: #ffffff;
+            font-size: 0.95em;
         }
         .progress-bar-bg {
             background-color: #0b0c10;
             border: 1px solid #45a29e;
             border-radius: 4px;
-            height: 18px;
+            height: 16px;
             width: 100%;
             overflow: hidden;
         }
         .progress-bar-fill {
             background: linear-gradient(90deg, #45a29e, #66fcf1);
             height: 100%;
+        }
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .roadmap-card {
+            background-color: #0b0c10;
+            border: 1px solid #2b3847;
+            border-top: 3px solid #45a29e;
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .roadmap-phase {
+            color: #66fcf1;
+            font-size: 0.8em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .roadmap-title {
+            color: #ffffff;
+            font-size: 1.05em;
+            font-weight: bold;
+            margin: 0 0 8px 0;
+        }
+        .roadmap-desc {
+            font-size: 0.9em;
+            margin: 0;
+            line-height: 1.4;
         }
         .log-entry {
             background-color: #0b0c10;
@@ -90,52 +146,106 @@
             font-size: 0.85em;
             margin-top: 10px;
         }
+        .screenshot-card {
+            background-color: #0b0c10;
+            border: 1px solid #45a29e;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .screenshot-card img {
+            width: 100%;
+            max-width: 750px;
+            border-radius: 4px;
+            border: 1px solid #2b3847;
+            display: block;
+            margin: 0 auto;
+        }
+        .screenshot-caption {
+            font-size: 0.9em;
+            color: #45a29e;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #6c7a89;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>AETHER GRID STUDIOS</h1>
-        <div class="subtitle">INTERACTIVE WORLDS // GAME ART // TRANSMEDIA</div>
+        <div class="subtitle">INTERACTIVE WORLDS // TACTICAL GAMES // TRANSMEDIA</div>
+
+        <div class="btn-center">
+            <a href="https://www.youtube.com/@ELITEGAMING01" target="_blank" class="yt-button">
+                ▶ WATCH DEVLOGS ON YOUTUBE
+            </a>
+        </div>
+
+        <h2>FEATURED DEVELOPMENT SHOWCASE</h2>
+        <div class="screenshot-card">
+            <img src="level-preview.png" alt="Vector Breach Level 1 Development Preview" onerror="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop';">
+            <div class="screenshot-caption">Vector Breach // Alpha Build — Level 1 Executive Crash Site &amp; Corridor Blockout</div>
+        </div>
 
         <h2>PROJECT: VECTOR BREACH — ALPHA STATUS</h2>
         
         <div class="progress-item">
-            <div class="progress-label">
-                <span>Core Movement & 360° Aiming Controls</span>
-                <span>100%</span>
-            </div>
-            <div class="progress-bar-bg">
-                <div class="progress-bar-fill" style="width: 100%;"></div>
-            </div>
+            <div class="progress-label"><span>Core Movement &amp; 360° Aiming Controls</span><span>100%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 100%;"></div></div>
         </div>
 
         <div class="progress-item">
-            <div class="progress-label">
-                <span>HUD System & Weapon Pickup Loop</span>
-                <span>100%</span>
-            </div>
-            <div class="progress-bar-bg">
-                <div class="progress-bar-fill" style="width: 100%;"></div>
-            </div>
+            <div class="progress-label"><span>HUD System &amp; Weapon Pickup Loop</span><span>100%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 100%;"></div></div>
         </div>
 
         <div class="progress-item">
-            <div class="progress-label">
-                <span>AIO Companion Drone State Machine</span>
-                <span>90%</span>
-            </div>
-            <div class="progress-bar-bg">
-                <div class="progress-bar-fill" style="width: 90%;"></div>
-            </div>
+            <div class="progress-label"><span>AIO Companion Drone State Machine</span><span>90%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
         </div>
 
         <div class="progress-item">
-            <div class="progress-label">
-                <span>Level 1 Crash Site & Lobby Graybox</span>
-                <span>75%</span>
+            <div class="progress-label"><span>Level 1 Crash Site &amp; Lobby Graybox</span><span>75%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 75%;"></div></div>
+        </div>
+
+        <h2>WHAT'S COMING NEXT // FUTURE ROADMAP</h2>
+        <div class="roadmap-grid">
+            <div class="roadmap-card">
+                <div class="roadmap-phase">NEXT MILESTONE // 01</div>
+                <div class="roadmap-title">Glass Elevator &amp; Lobby Arena</div>
+                <p class="roadmap-desc">Seamless exterior glass elevator transition descending to the ground-floor corporate lobby arena with high and low tactical cover.</p>
             </div>
-            <div class="progress-bar-bg">
-                <div class="progress-bar-fill" style="width: 75%;"></div>
+            <div class="roadmap-card">
+                <div class="roadmap-phase">NEXT MILESTONE // 02</div>
+                <div class="roadmap-title">Drop &amp; Swap Arsenal</div>
+                <p class="roadmap-desc">Tactical single-slot weapon swapping featuring the Apex P-9 Sidearm, Aegis Taskforce AR-15, and the V-60 Hand Cannon.</p>
+            </div>
+            <div class="roadmap-card">
+                <div class="roadmap-phase">NEXT MILESTONE // 03</div>
+                <div class="roadmap-title">5-Wave Lockdown &amp; SWAT AI</div>
+                <p class="roadmap-desc">Escalating arena waves introducing directional SWAT Shield Enforcers that require flanking maneuvers to defeat.</p>
+            </div>
+            <div class="roadmap-card">
+                <div class="roadmap-phase">FUTURE EXPANSION // 04</div>
+                <div class="roadmap-title">Transporter Class &amp; Portals</div>
+                <p class="roadmap-desc">Unlocking AIO's gyroscopic electrical wormhole mode for high-speed tactical cover transitions and secret area access.</p>
+            </div>
+            <div class="roadmap-card">
+                <div class="roadmap-phase">FUTURE EXPANSION // 05</div>
+                <div class="roadmap-title">Vector Clearance (50 Tiers)</div>
+                <p class="roadmap-desc">Full in-game progression track unlocking class overclocks, weapon attachments, drone shells, and Endless Arcade Mode.</p>
+            </div>
+            <div class="roadmap-card">
+                <div class="roadmap-phase">STUDIO PIPELINE // 06</div>
+                <div class="roadmap-title">Transmedia IP &amp; Custom 3D</div>
+                <p class="roadmap-desc">Custom Blender 3D asset integration and pre-production scripting for Aether Grid Studios' animated sci-fi series.</p>
             </div>
         </div>
 
@@ -148,13 +258,17 @@
 
         <h2>LATEST DEVELOPMENT LOGS</h2>
         <div class="log-entry">
-            <div class="log-date">UPDATE // AIO STATE MACHINE & METRICS</div>
-            <p>Unified the AIO Drone pathfinding and shoulder-companion behavior into a single state machine. Establishing 1-meter architectural scale metrics for the ground-floor Lobby Arena.</p>
+            <div class="log-date">DEVLOG EPISODE 1 // LIVE ON YOUTUBE</div>
+            <p>Our very first video devlog is out! Walking through the $0 solo-dev journey, Unity graybox progress, custom Blender medkit modeling, and the live HUD weapon loop.</p>
         </div>
         <div class="log-entry">
-            <div class="log-date">UPDATE // WEAPON LOCK & HUD ONLINE</div>
-            <p>Implemented the Vector Clearance HUD with live health and ammo tracking. Unarmed start and weapon pickup triggers are 100% operational.</p>
+            <div class="log-date">UPDATE // AIO STATE MACHINE &amp; SCALE METRICS</div>
+            <p>Unified the AIO Drone pathfinding and companion follow behavior into a single state machine. Established real-world architectural metrics for the Lobby Arena.</p>
         </div>
+
+        <footer>
+            &copy; 2026 Aether Grid Studios. All Rights Reserved.
+        </footer>
     </div>
 </body>
 </html>
