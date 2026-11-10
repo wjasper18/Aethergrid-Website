@@ -1,36 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Aether Grid Studios</title>
-   <style>
-       body {
-           background-color: #0b0c10;
-           color: #66fcf1;
-           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           height: 100vh;
-           margin: 0;
-           text-align: center;
-       }
-       .container {
-           border: 2px solid #1f2833;
-           padding: 40px;
-           background-color: #1f2833;
-           border-radius: 8px;
-           box-shadow: 0 0 20px rgba(102, 252, 241, 0.2);
-       }
-       h1 { margin: 0 0 10px 0; font-size: 2.5em; letter-spacing: 2px;}
-       p { color: #c5c6c7; font-size: 1.2em; }
-   </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether Grid Studios | Official Portal</title>
+    <style>
+        body {
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            border: 2px solid #45a29e;
+            padding: 40px;
+            background-color: #1f2833;
+            border-radius: 8px;
+            box-shadow: 0 0 25px rgba(102, 252, 241, 0.15);
+        }
+        h1 {
+            color: #66fcf1;
+            margin: 0 0 5px 0;
+            font-size: 2.5em;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #45a29e;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 35px;
+        }
+        h2 {
+            color: #66fcf1;
+            border-bottom: 1px solid #45a29e;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            letter-spacing: 1px;
+        }
+        .progress-item {
+            margin: 18px 0;
+        }
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .progress-bar-bg {
+            background-color: #0b0c10;
+            border: 1px solid #45a29e;
+            border-radius: 4px;
+            height: 18px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            background: linear-gradient(90deg, #45a29e, #66fcf1);
+            height: 100%;
+        }
+        .log-entry {
+            background-color: #0b0c10;
+            border-left: 4px solid #66fcf1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .log-date {
+            color: #66fcf1;
+            font-size: 0.85em;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #66fcf1;
+            color: #0b0c10;
+            padding: 4px 10px;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-   <div class="container">
-       <h1>AETHER GRID STUDIOS</h1>
-       <p>Interactive Worlds & Game Art // Currently in Production</p>
-   </div>
+    <div class="container">
+        <h1>AETHER GRID STUDIOS</h1>
+        <div class="subtitle">INTERACTIVE WORLDS // GAME ART // TRANSMEDIA</div>
+
+        <h2>PROJECT: VECTOR BREACH — ALPHA STATUS</h2>
+        
+        <div class="progress-item">
+            <div class="progress-label">
+                <span>Core Movement & 360° Aiming Controls</span>
+                <span>100%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 100%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <div class="progress-label">
+                <span>HUD System & Weapon Pickup Loop</span>
+                <span>100%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 100%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <div class="progress-label">
+                <span>AIO Companion Drone State Machine</span>
+                <span>90%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 90%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <div class="progress-label">
+                <span>Level 1 Crash Site & Lobby Graybox</span>
+                <span>75%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width: 75%;"></div>
+            </div>
+        </div>
+
+        <h2>UPCOMING PLAYTEST SCHEDULE</h2>
+        <div class="log-entry">
+            <div class="log-date">CLOSED ALPHA PLAYTEST // BUILD v0.1</div>
+            <p>Testing the opening crash tutorial, AIO drone waypoint guidance, and initial Lobby Arena combat loop.</p>
+            <span class="badge">STATUS: IN PREPARATION</span>
+        </div>
+
+        <h2>LATEST DEVELOPMENT LOGS</h2>
+        <div class="log-entry">
+            <div class="log-date">UPDATE // AIO STATE MACHINE & METRICS</div>
+            <p>Unified the AIO Drone pathfinding and shoulder-companion behavior into a single state machine. Establishing 1-meter architectural scale metrics for the ground-floor Lobby Arena.</p>
+        </div>
+        <div class="log-entry">
+            <div class="log-date">UPDATE // WEAPON LOCK & HUD ONLINE</div>
+            <p>Implemented the Vector Clearance HUD with live health and ammo tracking. Unarmed start and weapon pickup triggers are 100% operational.</p>
+        </div>
+    </div>
 </body>
 </html>
